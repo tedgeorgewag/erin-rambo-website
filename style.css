@@ -1,0 +1,231 @@
+/******************************
+	GENERAL PAGE STYLES
+******************************/
+@font-face {
+	font-family: 'Elegant Lux';
+	src: url('ElegantLux-Mager.otf');
+	src: url('ElegantLux-Mager.otf?#iefix') format('embedded-opentype'),
+    	url('ElegantLux-Mager.otf')  format('truetype');
+}
+html, body {
+	height: 100%;
+}
+header, footer {
+	font-family: 'Elegant Lux';
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	color: #A15B1A;
+	transition: color .2s;
+}
+header {
+	width: 100%;
+	text-align: center;
+	color: #000;
+	font-size: 1.4em;
+	padding: 20px 10px 0 10px;
+}
+nav {
+	margin: 10px;
+}
+nav a, nav span {
+	font-size: .85em;
+	margin-right: 10px;
+	margin-left: 10px;
+	white-space: nowrap;
+}
+#logo img {
+	width: 100px;
+	height: 33px;
+	margin-bottom: -3px;
+	margin-right: 8px;
+}
+.wrapper {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	background-color: #FFF;
+}
+footer {
+	height: 50px;
+	width: 100%;
+	-ms-flex-item-align: end;
+	        -webkit-align-self: flex-end;
+	        align-self: flex-end;
+	font-size: 1.15em;
+	text-align: center;
+	margin-top: 20px;
+}
+footer a {
+	display: block;
+}
+footer span {
+	padding-bottom: 20px;
+}
+
+/******************************
+	PORTFOLIO SECTION
+******************************/
+section {
+	width: 100%;
+}
+#gallery {
+	padding: 0;
+	text-align: center;
+}
+.gal-li {
+	margin: 10px;
+	list-style: none;
+}
+.gal-img {
+	width: 500px;
+	max-width: 100%;
+}
+#gal-nav {
+	display: none;
+}
+
+/******************************
+	BIO SECTION
+******************************/
+#bio-wrap {
+	text-align: center;
+}
+#bio-content {
+	max-width: 40em;
+	margin: 0 auto;
+}
+#bio-pic {
+	max-width: 75%;
+	margin: 15px;
+}
+p {
+	margin: 15px;
+	text-align: justify;
+	font-family: 'Roboto-Light', sans-serif;
+}
+
+/************************
+TABLET AND DESKTOP STYLES
+*************************/
+@media only screen and (min-device-width: 40em) and (min-width: 40em) {
+	header {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-align-items: flex-end;
+		    -ms-flex-align: end;
+		        align-items: flex-end;
+		-webkit-justify-content: space-between;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+	#site-nav {
+		-webkit-order: 1;
+		    -ms-flex-order: 1;
+		        order: 1;
+		margin: 0;
+	}
+	#logo {
+		-webkit-order: 2;
+		    -ms-flex-order: 2;
+		        order: 2;
+		margin-right: 10px;
+	}
+	#site-nav a:first-of-type {
+		margin-left: 10px;
+	}
+	#scroll-hider {
+		height: 434px;
+		overflow: hidden;
+	}
+	#gallery {
+		white-space: nowrap;
+		overflow-x: scroll;
+	}
+	.gal-li {
+		display: inline-block;
+		height: 100%;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.gal-li:first-of-type {
+		margin-left: 10px;
+	}
+	.gal-li:last-of-type {
+		margin-right: 10px;
+	}
+	.gal-img {
+		height: 410px;
+		width: auto;
+		max-width: none;
+	}
+	#gallery:before {
+		left: 0px;
+	}
+	#scroll-left, #scroll-right {
+		font-family: 'Elegant Lux';
+		font-size: 1.15em;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#gal-nav {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 0;
+	}
+	#gal-nav a:last-of-type {
+		position: absolute;
+		right: 0;
+	}
+	#bio-content {
+		max-width: 53em;
+		margin: 26px auto 0 auto;
+	}
+	#bio-pic {
+		max-width: 60%;
+		margin-bottom: 0;
+	}
+	article {
+		margin-left: 10px;
+		margin-right: 10px;
+		border-bottom: 1px solid black;
+	}
+	footer {
+		margin-top: 0;
+	}
+	footer a, footer span {
+		display: inline-block;
+		margin-left: 3%;
+		margin-right: 3%;
+		padding-bottom: 0;
+	}
+}
+@media only screen and (min-device-width: 49em) and (min-width: 49em) {
+	#scroll-hider {
+		height: 524px;
+	}
+	.gal-img {
+		height: 500px;
+	}
+	#gal-nav {
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (min-device-width: 58em) and (min-width: 58em) {
+	#scroll-hider {
+		height: 624px;
+	}
+	.gal-img {
+		height: 600px;
+	}
+}
