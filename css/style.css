@@ -3,15 +3,21 @@
 ******************************/
 @font-face {
 	font-family: 'Elegant Lux';
-	src: url('ElegantLux-Mager.otf');
-	src: url('ElegantLux-Mager.otf?#iefix') format('embedded-opentype'),
-    	url('ElegantLux-Mager.otf')  format('truetype');
+	src: url('../fonts/ElegantLux-Mager.otf');
+	src: url('../fonts/ElegantLux-Mager.otf?#iefix') format('embedded-opentype'),
+    	url('../fonts/ElegantLux-Mager.otf')  format('truetype');
+}
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../fonts/Roboto-Light.ttf');
+	src: url('../fonts/Roboto-Light.ttf?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Light.ttf') format('truetype');
 }
 html, body {
 	height: 100%;
 }
 header, footer {
-	font-family: 'Elegant Lux';
+	font-family: 'Elegant Lux', sans-serif;
 }
 a {
 	text-decoration: none;
@@ -56,7 +62,7 @@ nav a, nav span {
 	background-color: #FFF;
 }
 footer {
-	height: 50px;
+	height: auto;
 	width: 100%;
 	-ms-flex-item-align: end;
 	        -webkit-align-self: flex-end;
@@ -64,6 +70,7 @@ footer {
 	font-size: 1.15em;
 	text-align: center;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 footer a {
 	display: block;
@@ -87,7 +94,7 @@ section {
 	list-style: none;
 }
 .gal-img {
-	width: 500px;
+	width: 100%;
 	max-width: 100%;
 }
 #gal-nav {
@@ -101,17 +108,27 @@ section {
 	text-align: center;
 }
 #bio-content {
-	max-width: 40em;
+	max-width: 95%;
 	margin: 0 auto;
 }
 #bio-pic {
-	max-width: 75%;
+	max-width: 90%;
 	margin: 15px;
 }
+article {
+	margin-top: 35px;
+	border-bottom: 1px solid black;
+}
 p {
-	margin: 15px;
 	text-align: justify;
 	font-family: 'Roboto-Light', sans-serif;
+	font-size: 1.15em;
+}
+p:first-of-type {
+	margin-top: 0;
+}
+p:last-of-type {
+	padding-bottom: 15px;
 }
 
 /************************
@@ -173,7 +190,7 @@ TABLET AND DESKTOP STYLES
 		left: 0px;
 	}
 	#scroll-left, #scroll-right {
-		font-family: 'Elegant Lux';
+		font-family: 'Elegant Lux', sans-serif;
 		font-size: 1.15em;
 		margin-left: 20px;
 		margin-right: 20px;
@@ -187,6 +204,9 @@ TABLET AND DESKTOP STYLES
 		position: absolute;
 		right: 0;
 	}
+	#bio-wrap {
+		margin-bottom: 30px;
+	}
 	#bio-content {
 		max-width: 53em;
 		margin: 26px auto 0 auto;
@@ -198,7 +218,6 @@ TABLET AND DESKTOP STYLES
 	article {
 		margin-left: 10px;
 		margin-right: 10px;
-		border-bottom: 1px solid black;
 	}
 	footer {
 		margin-top: 0;
@@ -228,4 +247,27 @@ TABLET AND DESKTOP STYLES
 	.gal-img {
 		height: 600px;
 	}
+}
+/*RETINA DISPLAY QUERY*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { 
+    #logo img {
+    	width: 288px;
+    	height: 94px;
+    }
+    header {
+    	font-size: 4.8em;
+    	padding-bottom: 40px;
+    }
+    .gal-img {
+    	width: 100%;
+    }
+    #bio-pic {
+    	max-width: 100%;
+    }
+    p {
+    	font-size: 3em;
+    }
+    footer {
+    	font-size: 3.3em;
+    }
 }
